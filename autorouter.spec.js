@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { toReq } from './lib'
-import { AutoRouter } from './Autorouter'
+import { AutoRouter } from './AutoRouter'
 import { text, error } from 'itty-router'
 
 describe(`SPECIFIC TESTS: AutoRouter`, () => {
