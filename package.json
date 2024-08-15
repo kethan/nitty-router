@@ -1,7 +1,7 @@
 {
 	"name": "nitty-router",
 	"description": "Simple router for creating nested routes",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"type": "module",
 	"source": "./src/index.js",
 	"main": "./dist/index.cjs",
@@ -24,11 +24,11 @@
 			"default": "./dist/index.es.js"
 		},
 		"./Router": {
-			"browser": "./AutoRouter/dist/index.es.js",
-			"umd": "./AutoRouter/dist/index.umd.js",
-			"require": "./AutoRouter/dist/index.js",
-			"import": "./AutoRouter/dist/index.es.js",
-			"default": "./AutoRouter/dist/index.es.js"
+			"browser": "./Router/dist/index.es.js",
+			"umd": "./Router/dist/index.umd.js",
+			"require": "./Router/dist/index.js",
+			"import": "./Router/dist/index.es.js",
+			"default": "./Router/dist/index.es.js"
 		},
 		"./AutoRouter": {
 			"browser": "./AutoRouter/dist/index.es.js",
@@ -49,19 +49,23 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
 		"husky": "^9.1.4",
-		"itty-router": "^5.0.17",
 		"rollup": "^4.20.0",
-		"vitest": "^2.0.5"
+		"rollup-plugin-bundle-size": "^1.0.3",
+		"vitest": "^2.0.5",
+		"itty-router": "^5.0.17"
+	},
+	"dependencies": {
 	},
 	"keywords": [
 		"router",
 		"nesting",
 		"nested",
 		"express",
-        "polka",
-        "itty-router",
+		"polka",
+		"itty-router",
 		"middleware"
 	],
 	"author": "Kethan Surana",

@@ -1,7 +1,14 @@
 import terser from '@rollup/plugin-terser';
+import resolve from '@rollup/plugin-node-resolve';
+import bundleSize from 'rollup-plugin-bundle-size'
 
-const resolve = (pkg, input = "src/index", output = "dist/index") => ({
+
+const resolvePkg = (pkg, input = "src/index", output = "dist/index") => ({
 	input: `${input}.js`,
+	plugins: [
+		resolve(),
+        bundleSize()
+	],
 	output: [
 		{
 			file: `${output}.es.js`,
@@ -31,7 +38,8 @@ const resolve = (pkg, input = "src/index", output = "dist/index") => ({
 });
 
 export default [
-	resolve("router"),
-	resolve("router", "Router/index", "router/dist/index"),
-	resolve("router", "autorouter/index", "autorouter/dist/index"),
+	resolvePkg("router"),
+	resolvePkg("router", "IttyRouter/index", "IttyRouter/dist/index"),
+	resolvePkg("router", "Router/index", "Router/dist/index"),
+	resolvePkg("router", "AutoRouter/index", "AutoRouter/dist/index"),
 ]
