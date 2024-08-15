@@ -16,9 +16,27 @@
 			"import": "./dist/index.es.js",
 			"default": "./dist/index.es.js"
 		},
-		"./IttyRouter": "./src/index.js",
-		"./Router": "./Router/index.js",
-		"./AutoRouter": "./Autorouter/index.js",
+		"./IttyRouter": {
+			"browser": "./dist/index.es.js",
+			"umd": "./dist/index.umd.js",
+			"require": "./dist/index.js",
+			"import": "./dist/index.es.js",
+			"default": "./dist/index.es.js"
+		},
+		"./Router": {
+			"browser": "./AutoRouter/dist/index.es.js",
+			"umd": "./AutoRouter/dist/index.umd.js",
+			"require": "./AutoRouter/dist/index.js",
+			"import": "./AutoRouter/dist/index.es.js",
+			"default": "./AutoRouter/dist/index.es.js"
+		},
+		"./AutoRouter": {
+			"browser": "./AutoRouter/dist/index.es.js",
+			"umd": "./AutoRouter/dist/index.umd.js",
+			"require": "./AutoRouter/dist/index.js",
+			"import": "./AutoRouter/dist/index.es.js",
+			"default": "./AutoRouter/dist/index.es.js"
+		},
 		"./package.json": "./package.json"
 	},
 	"repository": {

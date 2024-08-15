@@ -32,6 +32,6 @@ const resolve = (pkg, input = "src/index", output = "dist/index") => ({
 
 export default [
 	resolve("router"),
-	resolve("router", "router/index", "router/dist/index"),
+	resolve("router", "Router/index", "router/dist/index"),
 	resolve("router", "autorouter/index", "autorouter/dist/index"),
 ]
