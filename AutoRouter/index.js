@@ -1,4 +1,4 @@
-import { Router } from '../router/index.js'
+import { Router } from '../Router/index.js'
 import { error, json, withParams } from 'itty-router';
 
 export const AutoRouter = ({

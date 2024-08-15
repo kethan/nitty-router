@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { createTestRunner, extract, toReq } from './lib'
 import { IttyRouter } from './src'
-import { Router as FlowRouter } from './router'
+import { Router as FlowRouter } from './Router'
 
 const ERROR_MESSAGE = 'Error Message'
 

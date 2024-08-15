@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { error, json } from 'itty-router'
 import { toReq } from './lib'
-import { Router } from './router';
+import { Router } from './Router';
 
 describe(`SPECIFIC TESTS: Router`, () => {
     it('allows populating a before stage', async () => {

@@ -1,7 +1,7 @@
 {
 	"name": "nitty-router",
 	"description": "Simple router for creating nested routes",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"source": "./src/index.js",
 	"main": "./dist/index.cjs",
@@ -17,8 +17,8 @@
 			"default": "./dist/index.es.js"
 		},
 		"./IttyRouter": "./src/index.js",
-		"./Router": "./router/index.js",
-		"./AutoRouter": "./autorouter/index.js",
+		"./Router": "./Router/index.js",
+		"./AutoRouter": "./Autorouter/index.js",
 		"./package.json": "./package.json"
 	},
 	"repository": {
