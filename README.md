@@ -1,6 +1,6 @@
 ## nitty-router
 
-# Nitty Router Nesting based router without base, powered by itty-router.
+# Nitty Router Nesting based without base, powered by itty-router.
 
 [![tests](https://github.com/kethan/nitty-router/actions/workflows/node.js.yml/badge.svg)](https://github.com/kethan/nitty-router/actions/workflows/node.js.yml) [![Version](https://img.shields.io/npm/v/nitty-router.svg?color=success&style=flat-square)](https://www.npmjs.com/package/nitty-router)
 

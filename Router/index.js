@@ -1,29 +1,10 @@
-const
-    compile = (path) => RegExp(`^${path
-        .replace(/\/+(\/|$)/g, '$1')                       // strip double & trailing splash
-        .replace(/(\/?\.?):(\w+)\+/g, '($1(?<$2>*))')       // greedy params
-        .replace(/(\/?\.?):(\w+)/g, '($1(?<$2>[^$1/]+?))')  // named params and image format
-        .replace(/\./g, '\\.')                              // dot in path
-        .replace(/(\/?)\*/g, '($1.*)?')
-        }/*$`),
-    mount = (fn) => fn.fetch || fn,
-    lead = x => x.startsWith('/') ? x : '/' + x,
-    add = (routes, method, route, handlers, path) =>
-        routes.push([method, compile(route), handlers.map(mount), path]),
-    use = (routes, route, handlers) =>
-        route === "/" ?
-            add(routes, "ALL", "/", handlers, "/") :
-            route?.call || route?.fetch ?
-                add(routes, "ALL", '/*', [route, ...handlers], "/*") :
-                handlers.forEach(handler =>
-                    handler?.routes?.forEach(([method, , handles, path]) =>
-                        add(routes, method, lead(route + path), handles, lead(route + path))));
+import { add, use } from '../src/utils'
 export const Router = ({ routes = [], ...other } = {}) => ({
     __proto__: new Proxy({}, {
         get: (_, prop, receiver) => (route, ...handlers) =>
-            (prop.toUpperCase() === "USE" ?
+            ((prop = prop.toUpperCase?.()) === "USE" ?
         use(routes, route, handlers) :
-        add(routes, prop.toUpperCase?.(), route, handlers, route),
+        add(routes, prop, route, handlers, route),
         receiver)
     }),
     routes,
